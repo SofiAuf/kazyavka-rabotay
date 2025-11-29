@@ -1,68 +1,80 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-/* ШАПКА */
 header {
-    background: #222;
-    color: #fff;
-    padding: 15px 30px;
+    background-color: #eee;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* GRID ТОВАРІВ */
-.products {
-    padding: 40px;
+.products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
+    padding: 20px;
+    /* По замовчуванню (для мобільних) - 1 колонка */
+    grid-template-columns: 1fr;
 }
 
-.product {
-    background: white;
+/* Медіа-запит: для екранів ширше 768px (планшети/ПК) ставимо 3 колонки */
+@media (min-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: #555; /* Темний фон як на слайді */
+    color: white;
+    border-radius: 10px;
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.product img {
+.card img {
     width: 100%;
-    border-radius: 6px;
+    height: 150px;
+    object-fit: contain;
+    background: white;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.product button {
-    margin-top: 10px;
-    padding: 8px 14px;
+.card h3 {
+    margin: 0 0 10px 0;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.seller-link {
+    color: #ccc;
+    font-size: 0.9em;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.buy-btn {
+    background-color: #ddd;
     border: none;
-    background: #222;
-    color: white;
+    padding: 10px;
+    width: 100%;
     cursor: pointer;
+    font-weight: bold;
     border-radius: 5px;
 }
 
-.product button:hover {
-    background: #444;
+.buy-btn:hover {
+    background-color: #ccc;
 }
-

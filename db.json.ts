@@ -23,6 +23,30 @@
       "price": 300,
       "description": "Wireless relay based on ESP-01S WIFI module.",
       "sellerId": 1
+    },
+    {
+      "id": 4,
+      "title": "RGB Module",
+      "image": "https://m.media-amazon.com/images/I/51f9S2eX+IL.jpg",
+      "price": 92,
+      "description": "Can make color party.",
+      "sellerId": 2
+    },
+    {
+      "id": 5,
+      "title": "Resistor 10k Ohm",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Resistor_10k_Ohm.jpg",
+      "price": 180,
+      "description": "Can resist the voltage. Super cool.",
+      "sellerId": 1
+    },
+    {
+      "id": 6,
+      "title": "7-Segment Display",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/7-segment_display-1.png/640px-7-segment_display-1.png",
+      "price": 300,
+      "description": "Epic display.",
+      "sellerId": 2
     }
   ],
   "users": [
